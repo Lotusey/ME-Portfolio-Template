@@ -1,11 +1,6 @@
 # ME-Portfolio-Template
 Portfolio website template for Mechanical, Civil, Aerospace, etc. Engineers
 
-## CAD model library
-
-The library is kept at the repository root so it is published correctly by GitHub Pages. Viewer URLs are resolved relative to the site, including when Pages hosts the site below a repository-name path.
-
-
 ## What is this?
 
 This simple portfolio template is designed to showcase your past projects, career history, skill sets, and more.
