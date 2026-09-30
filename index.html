@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="page-title">Portfolio</title>
+    <meta
+      name="description"
+      content="Mechanical engineering portfolio."
+    />
+    <meta name="theme-color" content="#E3350D" />
+    <meta property="og:title" content="Portfolio" />
+    <meta property="og:description" content="Mechanical engineering portfolio." />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23fff' stroke='%2316213A' stroke-width='3'/%3E%3Cpath d='M2 16a14 14 0 0 1 28 0z' fill='%23E3350D' stroke='%2316213A' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23fff' stroke='%2316213A' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="ball" aria-hidden="true"></span>
+          <span class="brand-text" id="brand-name">Portfolio</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#skills" data-nav>Skills</a></li>
+          <li><a href="#experience" data-nav>Experience</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#cad" data-nav>CAD Lab</a></li>
+          <li><a href="#contact" data-nav class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero container" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow reveal" style="--d: 0">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="availability">Open to opportunities</span>
+          </p>
+          <h1 class="hero-title reveal" id="hero-title" style="--d: 1">Your Name</h1>
+          <p class="hero-role reveal" style="--d: 2">
+            <span id="profile-discipline">Engineering</span> &middot; <span id="profile-role">Engineer</span>
+          </p>
+          <p class="hero-lede reveal" id="profile-summary" style="--d: 3"></p>
+          <div class="hero-actions reveal" style="--d: 4">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="dex reveal" style="--d: 2" aria-label="Terminal introduction" role="region">
+          <div class="dex-top" aria-hidden="true">
+            <span class="dex-lens"></span>
+            <span class="dex-led dex-led--red"></span>
+            <span class="dex-led dex-led--yellow"></span>
+            <span class="dex-led dex-led--ink"></span>
+          </div>
+          <div class="dex-screen-frame">
+            <div class="dex-screen">
+              <div class="term-bar" aria-hidden="true">
+                <span id="terminal-home">~/portfolio</span>
+                <span>zsh</span>
+              </div>
+              <pre class="term" id="terminal" aria-live="off"></pre>
+              <noscript>
+                <pre class="term">$ whoami
+your-name
+$ ./catch --all opportunities
+Gotta ship 'em all.</pre>
+              </noscript>
+            </div>
+          </div>
+          <div class="dex-controls" aria-hidden="true">
+            <span class="dex-dpad"></span>
+            <span class="dex-slot"></span>
+            <span class="dex-btns">
+              <span class="dex-btn"></span>
+              <span class="dex-btn"></span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="path">~/skills</p>
+            <h2 class="section-title" id="skills-title">Engineering toolkit</h2>
+            <p class="section-sub" id="skills-subtitle"></p>
+          </div>
+          <div class="skills-grid" id="skills-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="path">~/experience</p>
+            <h2 class="section-title" id="experience-title">Experience</h2>
+            <p class="section-sub" id="experience-subtitle"></p>
+          </div>
+          <ol class="experience-timeline" id="experience-timeline"></ol>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="path">~/projects</p>
+            <h2 class="section-title" id="projects-title">Design projects</h2>
+            <p class="section-sub" id="projects-subtitle"></p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects by technology" id="filters"></div>
+          <ul class="projects-grid" id="projects-grid"></ul>
+          <p class="empty" id="projects-empty" hidden>No projects match this filter.</p>
+        </div>
+      </section>
+
+      <section class="section section--alt cad-section" id="cad" aria-labelledby="cad-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="path">~/cad-lab</p>
+            <h2 class="section-title" id="cad-title">CAD library</h2>
+            <p class="section-sub">Browse technical drawings and 3D models.</p>
+          </div>
+          <div class="cad-tabs" role="tablist" aria-label="CAD viewer type">
+            <button class="cad-tab" id="cad-tab-2d" type="button" role="tab" aria-selected="true" aria-controls="cad-panel-2d" data-cad-tab="2d">2D drawings</button>
+            <button class="cad-tab" id="cad-tab-3d" type="button" role="tab" aria-selected="false" aria-controls="cad-panel-3d" data-cad-tab="3d" tabindex="-1">3D models</button>
+          </div>
+          <div class="cad-layout">
+            <div class="cad-stage-wrap">
+              <section class="cad-view-panel" id="cad-panel-2d" role="tabpanel" aria-labelledby="cad-tab-2d" tabindex="0">
+                <div class="cad-stage" aria-label="2D technical drawing viewer">
+                  <iframe id="cad-2d-embed" class="cad-embed" title="2D DWG or DXF drawing viewer" loading="lazy" allowfullscreen hidden></iframe>
+                  <div class="cad-view-empty" id="cad-2d-empty">No 2D drawings are in the library yet.</div>
+                  <div class="cad-hud"><span id="cad-2d-name">2D drawing</span><span>DWG / DXF</span></div>
+                </div>
+                <div class="cad-controls"><p class="cad-note" id="cad-2d-status" role="status">Choose a drawing from the library.</p></div>
+              </section>
+              <section class="cad-view-panel" id="cad-panel-3d" role="tabpanel" aria-labelledby="cad-tab-3d" tabindex="0" hidden>
+                <div class="cad-stage" aria-label="Interactive 3D model viewer">
+                  <canvas id="cad-3d-canvas" aria-label="3D model viewport"></canvas>
+                  <div class="cad-view-empty" id="cad-3d-empty">No 3D models are in the library yet.</div>
+                  <div class="cad-hud"><span id="cad-3d-name">3D model</span><span>DRAG TO ORBIT</span></div>
+                </div>
+                <div class="cad-controls">
+                  <button class="btn btn-ghost cad-reset" id="cad-3d-reset" type="button" aria-label="Reset 3D view">Reset view</button>
+                  <p class="cad-note" id="cad-3d-status" role="status">Choose a model from the library.</p>
+                </div>
+              </section>
+            </div>
+            <aside class="cad-library" aria-label="Model library">
+              <div class="cad-library-section" aria-labelledby="cad-2d-library-title">
+                <p class="type-label" id="cad-2d-library-title">2D drawings</p>
+                <div class="cad-samples" id="cad-2d-samples" role="list"></div>
+              </div>
+              <div class="cad-library-section" aria-labelledby="cad-3d-library-title">
+                <p class="type-label" id="cad-3d-library-title">3D models</p>
+                <div class="cad-samples" id="cad-3d-samples" role="list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact">
+          <div class="section-head">
+            <p class="path">~/contact</p>
+            <h2 class="section-title" id="contact-title">Contact me</h2>
+          </div>
+
+          <div class="battle">
+            <div class="battle-text">
+              <p class="battle-line" id="battle-line"></p>
+              <p class="battle-sub" id="contact-intro"></p>
+            </div>
+            <ul class="battle-menu" id="contact-links" aria-label="Contact options">
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year">2026</span> <span id="footer-name">Your Name</span></p>
+        <p class="footer-mono">Mechanical engineering portfolio</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script type="module" src="cad-viewer.js"></script>
+  </body>
+</html>

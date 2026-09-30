@@ -1,0 +1,1 @@
+Place `.dwg` and `.dxf` files in this folder, then add their names and `/models/2d/<filename>` paths to `../catalog.json` under `twoD`.

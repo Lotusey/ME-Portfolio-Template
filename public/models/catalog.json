@@ -1,0 +1,16 @@
+{
+  "twoD": [
+    {
+      "name": "Plate layout",
+      "description": "DXF / 2D drawing",
+      "url": "/models/2d/plate-layout.dxf"
+    }
+  ],
+  "threeD": [
+    {
+      "name": "Mounting bracket",
+      "description": "OBJ / 3D part",
+      "url": "/models/3d/mounting-bracket.obj"
+    }
+  ]
+}
