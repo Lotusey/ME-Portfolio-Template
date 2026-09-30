@@ -4,7 +4,9 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { STLLoader } from "three/addons/loaders/STLLoader.js";
 
-const manifestUrl = "/models/catalog.json";
+const appBaseUrl = new URL("./", import.meta.url);
+const modelsBaseUrl = new URL("models/", appBaseUrl);
+const manifestUrl = new URL("models/catalog.json", appBaseUrl);
 const allowedExtensions = {
   twoD: new Set(["dwg", "dxf"]),
   threeD: new Set(["glb", "stl", "obj"]),
@@ -44,8 +46,9 @@ function extensionOf(path) {
 
 function safeModelUrl(path) {
   if (typeof path !== "string") return null;
-  const url = new URL(path, window.location.origin);
-  if (url.origin !== window.location.origin || !url.pathname.startsWith("/models/")) return null;
+  const relativePath = path.replace(/^\/+/, "");
+  const url = new URL(relativePath, appBaseUrl);
+  if (url.origin !== appBaseUrl.origin || !url.pathname.startsWith(modelsBaseUrl.pathname)) return null;
   return url;
 }
 

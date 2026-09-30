@@ -1,1 +1,0 @@
-Place `.glb`, `.stl`, and `.obj` files in this folder, then add their names and `/models/3d/<filename>` paths to `../catalog.json` under `threeD`.

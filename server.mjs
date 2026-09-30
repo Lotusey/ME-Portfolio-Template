@@ -24,11 +24,7 @@ const types = {
 
 createServer(async (req, res) => {
   const url = new URL(req.url ?? "/", "http://localhost");
-  const pathname = url.pathname === "/"
-    ? "/index.html"
-    : url.pathname.startsWith("/models/")
-      ? `/public${url.pathname}`
-      : url.pathname;
+  const pathname = url.pathname === "/" ? "/index.html" : url.pathname;
   let path = normalize(decodeURIComponent(pathname)).replace(/^(\.\.[/\\])+/, "");
   if (path.endsWith("/")) path += "index.html";
   const file = join(root, path);
